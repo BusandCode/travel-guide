@@ -6,8 +6,8 @@ import {IoLogoTwitter} from "react-icons/io"
 const Footer = () => {
   return (
     <div style={{fontFamily:"Nunito"}}>
-      <div className='bg-slate-600 flex mt-5 p-5 flex-col gap-5 items-center justify-evenly'>
-        <h2>CODELAB</h2>
+      <div className='bg-slate-900 flex mt-2 p-5 flex-col gap-5 items-center justify-evenly'>
+        <h2 className='text-gray-300'>CODELAB</h2>
          <div className='justify-around gap-3 flex xl:flex-row sm:flex-col items-center'>
       <a href="#" className='text-lg hover:no-underline text-white font-bold'>Home</a>
       <a href="#about" className='text-lg hover:no-underline text-white font-bold'>About</a>

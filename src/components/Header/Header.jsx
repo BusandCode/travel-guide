@@ -1,10 +1,13 @@
 import React from 'react'
+import { useState } from 'react';
 import "./Header.css"
 import { FaLocationDot } from "react-icons/fa6";
 import { FaBars } from 'react-icons/fa6';
 
 
 const Header = () => {
+
+  const [showMenu,setShowMenu] = useState(false)
 
   return (
     <section style={{fontFamily:"Nunito"}} className='header overflow-hidden'>
@@ -14,16 +17,38 @@ const Header = () => {
      <FaLocationDot size={30} className='mb-2 text-red-600' />
      <h1 className='text-red-600 text-3xl'>Tourist</h1>
       </div>
-      <div className='lg:flex flex-row sm:hidden justify-center items-center gap-4'>
+      <div>
+      <div className='lg:flex flex-row hidden justify-center items-center gap-4'>
       <a href="#" className='text-lg hover:no-underline text-white font-bold'>Home</a>
       <a href="#about" className='text-lg hover:no-underline text-white font-bold'>About</a>
       <a href="#services" className='text-lg hover:no-underline text-white font-bold'>Services</a>
       <a href="#packages" className='text-lg hover:no-underline text-white font-bold'>Packages</a>
-      <a href="#pages" className='text-lg hover:no-underline text-white font-bold'>Pages</a>
       <a href="#register" className='bg-red-600 text-white rounded-full py-3 px-4 hover:bg-slate-600 hover:no-underline hover:text-white' >Register</a>
       </div>
-      <FaBars className='text-white block cursor-pointer lg:hidden' size={30}  />
-
+      <div>
+        <FaBars onClick={()=>{setShowMenu(true)}} className="flex text-2xl md:hidden cursor-pointer text-white"/>
+        {showMenu && 
+        <div className="absolute flex md:hidden justify-center right-0 bg-slate-800 p-5 min-w-[300px] min-h-screen top-0 ">
+            <h1 className="text-2xl font-bold absolute right-10 cursor-pointer text-white"onClick={()=>{
+                setShowMenu(false)
+            }}>X</h1>
+            <ul className="flex flex-col items-center justify-center gap-5">
+            <li className="cursor-pointer" onClick={()=>{
+                setShowMenu(false)
+            }}><a href="/" >Home</a></li>
+            <li className="cursor-pointer" onClick={()=>{
+                setShowMenu(false)
+            }}><a href="#about">About</a></li>
+            <li className="cursor-pointer" onClick={()=>{
+                setShowMenu(false)
+            }}><a href="#skills">Services</a></li>
+            <li className="cursor-pointer" onClick={()=>{
+                setShowMenu(false)
+            }}><a href="#packages">Packages</a></li>
+        </ul>
+        </div>}
+        </div>
+        </div>
     </div>
       {/* <div aria-label='Toggle-menu' className='bg-slate-600 relative top-16 h-96 lg:hidden justify-center gap-4 flex flex-col items-center'>
       <a href="#" className='text-lg hover:no-underline text-white font-bold'>Home</a>
