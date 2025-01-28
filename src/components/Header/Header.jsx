@@ -41,7 +41,7 @@ const Header = () => {
             }}><a href="#about">About</a></li>
             <li className="cursor-pointer" onClick={()=>{
                 setShowMenu(false)
-            }}><a href="#skills">Services</a></li>
+            }}><a href="#services">Services</a></li>
             <li className="cursor-pointer" onClick={()=>{
                 setShowMenu(false)
             }}><a href="#packages">Packages</a></li>
