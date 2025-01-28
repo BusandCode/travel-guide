@@ -35,7 +35,7 @@ const Header = () => {
             <ul className="flex flex-col items-center justify-center gap-5">
             <li className="cursor-pointer" onClick={()=>{
                 setShowMenu(false)
-            }}><a href="/" >Home</a></li>
+            }}><a href="#" >Home</a></li>
             <li className="cursor-pointer" onClick={()=>{
                 setShowMenu(false)
             }}><a href="#about">About</a></li>
